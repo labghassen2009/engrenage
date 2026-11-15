@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1f5f2">
+  <meta name="description" content="Un cours interactif pour comprendre les engrenages, leurs types, leurs matériaux et les calculs essentiels d'une transmission.">
+  <title>Engrenages — comprendre et calculer</title>
+  <!-- CSS : styles du site et de la présentation -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Navigation principale">
+      <a class="brand" href="#accueil" aria-label="Engrenages, accueil">
+        <span class="brand-mark" aria-hidden="true">⚙</span>
+        <span>Atelier mécanique</span>
+      </a>
+      <div class="nav-links">
+        <a href="#bases">Les bases</a>
+        <a href="#types">Types</a>
+        <a href="#materiaux">Matériaux</a>
+        <a href="#calculs">Calculs</a>
+        <a href="#simulateur">Simulation</a>
+      </div>
+      <a class="nav-cta" href="#calculs">Essayer la calculatrice <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <div class="presentation-stage">
+  <main>
+    <section class="hero wrap" id="accueil">
+      <div class="hero-layout">
+        <div class="hero-content">
+          <p class="eyebrow">Le guide essentiel · Génie mécanique</p>
+          <h1>Les engrenages,<br><span>en mouvement.</span></h1>
+          <p class="hero-copy">Comprendre comment les roues dentées transmettent un mouvement, choisir le bon engrenage et calculer ses performances.</p>
+          <div class="hero-actions">
+            <a class="button" href="#bases">Découvrir le cours <span aria-hidden="true">↓</span></a>
+            <a class="button secondary" href="#calculs">Calculer un rapport</a>
+          </div>
+          <div class="hero-note"><span class="note-dot" aria-hidden="true">01</span> Un parcours clair, des notions aux calculs pratiques</div>
+        </div>
+        <figure class="hero-visual">
+          <span class="photo-label">L’INGÉNIERIE EN ACTION</span>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Babbage_Difference_Engine_%28Power_Supply_-_close-up%29.jpg"
+            alt="Gros plan photographique sur les engrenages métalliques dorés et noirs de la machine à différences de Babbage"
+            width="3736"
+            height="2872"
+            fetchpriority="high"
+            decoding="async">
+          <figcaption class="photo-credit">« Babbage Difference Engine (Power Supply - close-up) » — Jitze Couperus · Wikimedia Commons · CC BY 2.0.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section wrap" id="bases">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">01 · Comprendre</p>
+          <h2>Tout commence par une dent.</h2>
+        </div>
+        <p>Un engrenage transmet une rotation et un effort d’une pièce à une autre grâce à des dents qui s’engrènent.</p>
+      </div>
+      <div class="intro-grid">
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">⚙</span>
+          <div>
+            <h3>Un mouvement transmis avec précision.</h3>
+            <p>Le nombre de dents et la géométrie des roues déterminent la vitesse, le couple et le sens de rotation en sortie.</p>
+          </div>
+        </article>
+        <div class="definitions">
+          <article class="definition-card">
+            <span class="number">NOTION 01</span>
+            <h3>La denture</h3>
+            <p>Ensemble des dents d’une roue. Leur nombre et leur espacement doivent être compatibles avec la roue en prise.</p>
+          </article>
+          <article class="definition-card">
+            <span class="number">NOTION 02</span>
+            <h3>Le profil</h3>
+            <p>La forme de chaque dent. Le profil en développante de cercle assure un rapport de vitesse régulier.</p>
+          </article>
+          <article class="definition-card">
+            <span class="number">NOTION 03</span>
+            <h3>Le cercle primitif</h3>
+            <p>Cercle théorique de référence. Deux cercles primitifs en prise roulent l’un sur l’autre sans glisser.</p>
+          </article>
+          <article class="definition-card">
+            <span class="number">À RETENIR</span>
+            <h3>Roue menante / menée</h3>
+            <p>La roue menante reçoit le mouvement ; la roue menée est entraînée et devient la sortie du mécanisme.</p>
+          </article>
+        </div>
+      </div>
+      <div class="motion-band">
+        <div>
+          <h3>Réduire la vitesse, augmenter le couple.</h3>
+          <p>Si la roue menée possède davantage de dents, elle tourne moins vite. Dans une transmission idéale, le couple augmente en proportion inverse. Deux roues extérieures en prise tournent en sens opposés.</p>
+        </div>
+        <div class="gear-visual" role="img" aria-label="Deux roues dentées de tailles différentes en prise">
+          <span class="gear">MENANTE</span><span class="arrow" aria-hidden="true">↔</span><span class="gear">MENÉE</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-section" id="types">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">02 · Identifier</p>
+            <h2>Une géométrie pour chaque mouvement.</h2>
+          </div>
+          <p>Le choix dépend de la position des axes, du rapport recherché, du bruit acceptable et des efforts à transmettre.</p>
+        </div>
+        <div class="type-grid">
+          <article class="type-card">
+            <img class="type-photo" src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Ellis_Mill_-_Spur_Gearing_-_geograph.org.uk_-_2930545.jpg" alt="Photographie réelle du mécanisme à engrenages droits du moulin Ellis Mill" width="960" height="640" loading="lazy" decoding="async">
+            <span class="type-symbol" aria-hidden="true">↔</span>
+            <h3>Dents droites</h3>
+            <p>Dents parallèles à l’axe, fabrication simple et bon rendement. Adaptées aux axes parallèles.</p>
+            <span class="section-kicker">Usage courant</span>
+            <p class="type-credit">Photo : Ashley Dace · Wikimedia Commons · CC BY-SA 2.0.</p>
+          </article>
+          <article class="type-card">
+            <img class="type-photo" src="https://upload.wikimedia.org/wikipedia/commons/8/89/Double-helical_gear.jpg" alt="Roue à double denture hélicoïdale, dite en chevrons" width="960" height="640" loading="lazy" decoding="async">
+            <span class="type-symbol" aria-hidden="true">∿</span>
+            <h3>Dents hélicoïdales</h3>
+            <p>Engrènement progressif et généralement plus silencieux. La double hélice peut compenser les efforts axiaux.</p>
+            <span class="section-kicker">Transmission régulière</span>
+            <p class="type-credit">Photo : Parchaco · Wikimedia Commons · CC0.</p>
+          </article>
+          <article class="type-card">
+            <img class="type-photo" src="https://upload.wikimedia.org/wikipedia/commons/7/7f/MOSI-11_Power_Hall_bevelled_gear_5435.JPG" alt="Photographie réelle d’un engrenage conique exposé dans la galerie des machines du musée de Manchester" width="960" height="640" loading="lazy" decoding="async">
+            <span class="type-symbol" aria-hidden="true">⌁</span>
+            <h3>Engrenages coniques</h3>
+            <p>Transmettent le mouvement entre des axes concourants, souvent à angle droit.</p>
+            <span class="section-kicker">Renvoi d’angle</span>
+            <p class="type-credit">Photo : Clem Rutter · Wikimedia Commons · CC BY-SA 3.0.</p>
+          </article>
+          <article class="type-card">
+            <img class="type-photo" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Gearbox_with_worm_and_gears.jpg" alt="Photographie réelle d’un mécanisme de boîte de vitesses avec vis sans fin et engrenages" width="960" height="640" loading="lazy" decoding="async">
+            <span class="type-symbol" aria-hidden="true">⟲</span>
+            <h3>Roue et vis sans fin</h3>
+            <p>Relient des axes non concourants et permettent de fortes réductions de vitesse.</p>
+            <span class="section-kicker">Levage, convoyage</span>
+            <p class="type-credit">Photo : Vicn70 · Wikimedia Commons · CC BY-SA 4.0.</p>
+          </article>
+        </div>
+        <div class="type-insight">
+          <strong>Lire le schéma des dents droites :</strong>
+          <span>14 dents menantes et 28 dents menées</span>
+          <span class="formula">i = 28 / 14 = 2</span>
+          <span>La roue de sortie tourne deux fois moins vite.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="materiaux">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">03 · Choisir</p>
+          <h2>Le matériau fait la différence.</h2>
+        </div>
+        <p>Température, charge, usure, bruit et lubrification orientent le choix. Chaque solution implique des compromis.</p>
+      </div>
+      <div class="material-grid">
+        <article class="material-card">
+          <span class="material-index">01 / ROBUSTESSE</span>
+          <h3>Aciers traités</h3>
+          <p>Bonne résistance aux charges et à l’usure, souvent recherchée pour les transmissions fortement sollicitées.</p>
+        </article>
+        <article class="material-card">
+          <span class="material-index">02 / GLISSEMENT</span>
+          <h3>Bronzes</h3>
+          <p>Intéressants pour leur comportement au glissement, notamment avec une vis sans fin en acier.</p>
+        </article>
+        <article class="material-card">
+          <span class="material-index">03 / AMORTISSEMENT</span>
+          <h3>Fontes</h3>
+          <p>Rigides et capables d’amortir les vibrations ; elles conviennent à certains composants de transmission.</p>
+        </article>
+        <article class="material-card">
+          <span class="material-index">04 / LÉGÈRETÉ</span>
+          <h3>Polymères</h3>
+          <p>Légers et souvent silencieux, ils sont utiles pour des charges et températures compatibles avec le matériau.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section soft-section" id="calculs">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">04 · Dimensionner</p>
+            <h2>Des dents aux vitesses.</h2>
+          </div>
+          <p>Quelques relations simples permettent d’estimer le rapport de transmission et les grandeurs de sortie.</p>
+        </div>
+        <div class="calc-layout">
+          <div class="formula-stack">
+            <article class="formula-card">
+              <h3>Rapport de transmission</h3>
+              <span class="formula">i = Z₂ / Z₁ = n₁ / n₂</span>
+              <p>Z désigne le nombre de dents ; n, la vitesse de rotation. Pour une réduction, i est supérieur à 1.</p>
+            </article>
+            <article class="formula-card">
+              <h3>Vitesse de sortie</h3>
+              <span class="formula">n₂ = n₁ / i</span>
+              <p>À titre d’exemple, un rapport i = 3 divise par trois la vitesse d’entrée.</p>
+            </article>
+            <article class="formula-card">
+              <h3>Diamètre primitif et entraxe</h3>
+              <span class="formula">d = m × Z</span>
+              <p>Pour deux roues droites extérieures de même module : a = m × (Z₁ + Z₂) / 2.</p>
+            </article>
+            <article class="formula-card">
+              <h3>Couple idéal</h3>
+              <span class="formula">T₂ ≈ η × i × T₁</span>
+              <p>η représente le rendement. Les pertes réelles réduisent le couple disponible en sortie.</p>
+            </article>
+          </div>
+          <form class="calculator-card" id="calculator">
+            <h3>Calculatrice de transmission</h3>
+            <p>Entrez les caractéristiques des deux roues pour estimer la sortie.</p>
+            <div class="form-grid">
+              <div class="field">
+                <label for="teeth-input">Dents de la roue menante (Z₁)</label>
+                <input id="teeth-input" name="teethInput" type="number" min="1" max="10000" step="1" value="20" required>
+              </div>
+              <div class="field">
+                <label for="teeth-output">Dents de la roue menée (Z₂)</label>
+                <input id="teeth-output" name="teethOutput" type="number" min="1" max="10000" step="1" value="60" required>
+              </div>
+              <div class="field">
+                <label for="speed-input">Vitesse d’entrée (tr/min)</label>
+                <input id="speed-input" name="speedInput" type="number" min="0.01" max="1000000" step="any" value="1500" required>
+              </div>
+              <div class="field">
+                <label for="torque-input">Couple d’entrée (N·m)</label>
+                <input id="torque-input" name="torqueInput" type="number" min="0" max="1000000" step="any" value="2" required>
+              </div>
+              <div class="field">
+                <label for="efficiency">Rendement estimé (%)</label>
+                <input id="efficiency" name="efficiency" type="number" min="0" max="100" step="1" value="95" required>
+                <small>Estimation pour le calcul du couple.</small>
+              </div>
+            </div>
+            <button class="button calc-submit" type="submit">Calculer les valeurs <span aria-hidden="true">→</span></button>
+            <div class="result" id="result" role="status" aria-live="polite"></div>
+            <p class="example">Exemple : 20 dents en entrée et 60 en sortie donnent i = 3.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-section" id="simulateur">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">05 · Choisir et tester</p>
+            <h2>Quel engrenage convient à votre projet ?</h2>
+          </div>
+          <p>Choisissez un mécanisme, consultez sa photographie réelle, puis manipulez son schéma interactif pour observer le mouvement et le rapport.</p>
+        </div>
+        <div class="model-picker" role="group" aria-label="Choisir un mécanisme à engrenages">
+          <button class="model-option" type="button" data-model="spur" aria-pressed="true">
+            <span class="model-option-icon" aria-hidden="true">⚙</span>
+            <span><strong>Dents droites</strong><small>Axes parallèles</small></span>
+          </button>
+          <button class="model-option" type="button" data-model="helical" aria-pressed="false">
+            <span class="model-option-icon" aria-hidden="true">∿</span>
+            <span><strong>Dents hélicoïdales</strong><small>Silencieux, régulier</small></span>
+          </button>
+          <button class="model-option" type="button" data-model="bevel" aria-pressed="false">
+            <span class="model-option-icon" aria-hidden="true">⌁</span>
+            <span><strong>Engrenages coniques</strong><small>Axes concourants</small></span>
+          </button>
+          <button class="model-option" type="button" data-model="worm" aria-pressed="false">
+            <span class="model-option-icon" aria-hidden="true">⟲</span>
+            <span><strong>Vis sans fin</strong><small>Forte réduction</small></span>
+          </button>
+          <button class="model-option" type="button" data-model="rack" aria-pressed="false">
+            <span class="model-option-icon" aria-hidden="true">↔</span>
+            <span><strong>Pignon-crémaillère</strong><small>Rotation → translation</small></span>
+          </button>
+          <button class="model-option" type="button" data-model="planetary" aria-pressed="false">
+            <span class="model-option-icon" aria-hidden="true">☼</span>
+            <span><strong>Train planétaire</strong><small>Compact, coaxial</small></span>
+          </button>
+        </div>
+        <p class="sim-model-description" id="sim-model-description" aria-live="polite"></p>
+        <div class="buy-checklist" aria-label="Points à vérifier avant un achat">
+          <strong>Avant d’acheter :</strong>
+          <span>module compatible</span>
+          <span>diamètre d’arbre</span>
+          <span>charge et vitesse</span>
+          <span>matière / lubrification</span>
+          <span>entraxe et montage</span>
+        </div>
+        <p class="photo-credit">Outil pédagogique de comparaison : il ne présente ni prix ni stock. Vérifiez les cotes et charges dans la fiche du fabricant avant toute commande.</p>
+        <details class="sim-reference">
+          <summary id="sim-reference-summary">Voir une photographie réelle de ce mécanisme</summary>
+          <figure>
+            <img id="sim-reference-image" src="" alt="" loading="lazy" decoding="async">
+            <figcaption>
+              <span id="sim-reference-description"></span>
+              <span class="sim-reference-credit" id="sim-reference-credit"></span>
+            </figcaption>
+          </figure>
+        </details>
+        <p class="photo-credit">Le dessin est un schéma pédagogique interactif ; la photographie montre le mécanisme réel. Ce n’est pas un modèle CAO de fabrication.</p>
+        <div class="simulator">
+          <div class="gear-viewer">
+            <div class="gear-view-tabs" role="group" aria-label="Mode d’affichage des engrenages">
+              <button class="gear-view-tab is-active" id="view-2d" type="button" aria-pressed="true">Schéma 2D</button>
+              <button class="gear-view-tab" id="view-3d" type="button" aria-pressed="false">Modèle 3D</button>
+            </div>
+            <svg class="gear-simulator" id="gear-simulator" viewBox="0 0 460 260" role="group" aria-label="Simulation interactive d’un engrenage"></svg>
+            <div class="gear-3d-panel" id="gear-3d-panel" hidden>
+              <div class="gear-3d-canvas" id="gear-3d-canvas" role="img" aria-label="Modèle 3D interactif du mécanisme à engrenages"></div>
+              <p class="gear-3d-status" id="gear-3d-status" role="status">Chargement du modèle 3D…</p>
+              <div class="gear-3d-actions">
+                <button class="deck-button" id="gear-3d-back" type="button" aria-label="Tourner le modèle 3D d’un tour en arrière">↶ −1 tour</button>
+                <button class="deck-button primary" id="gear-3d-forward" type="button">+1 tour ↻</button>
+                <button class="deck-button" id="gear-3d-reset" type="button">Réinitialiser</button>
+              </div>
+              <small>Glissez pour faire pivoter la vue · Molette pour zoomer</small>
+            </div>
+          </div>
+          <div class="sim-controls">
+            <h3 id="sim-title">Choisissez une roue pour commencer.</h3>
+            <p id="sim-instructions">Sélectionnez un modèle, puis faites glisser la roue avec la souris ou le doigt. Les flèches du clavier permettent aussi de la tourner.</p>
+            <div class="sim-inputs">
+              <label for="sim-drive-teeth" id="sim-drive-label">Dents menantes (Z₁)
+                <input id="sim-drive-teeth" type="number" min="6" max="40" step="1" value="12">
+              </label>
+              <label for="sim-driven-teeth" id="sim-driven-label">Dents menées (Z₂)
+                <input id="sim-driven-teeth" type="number" min="8" max="60" step="1" value="24">
+              </label>
+              <label for="sim-module" id="sim-module-label" hidden>Module (mm)
+                <input id="sim-module" type="number" min="0.5" max="10" step="0.5" value="2">
+              </label>
+            </div>
+            <div class="turn-readouts" aria-live="polite">
+              <div class="turn-readout">
+                <span id="drive-readout-label">Rotation menante</span>
+                <strong id="drive-turns">0 tour</strong>
+              </div>
+              <div class="turn-readout output">
+                <span id="driven-readout-label">Rotation menée</span>
+                <strong id="driven-turns">0 tour</strong>
+              </div>
+            </div>
+            <div class="sim-actions">
+              <button class="deck-button" id="turn-backward" type="button" aria-label="Tourner le mécanisme d’un tour en arrière">↶ −1 tour</button>
+              <button class="deck-button primary" id="turn-forward" type="button">+1 tour ↻</button>
+              <button class="deck-button" id="reset-gears" type="button">Réinitialiser</button>
+            </div>
+            <p class="sim-status" id="sim-status" role="status">Faites glisser le modèle pour l’explorer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="retenir">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">06 · Mémoriser</p>
+          <h2>Le bon réflexe, à chaque projet.</h2>
+        </div>
+      </div>
+      <div class="takeaway">
+        <span class="check" aria-hidden="true">✓</span>
+        <div>
+          <h3>Identifier, choisir, calculer.</h3>
+          <p>Identifiez la disposition des axes et le mouvement souhaité ; choisissez un type d’engrenage et un matériau adaptés ; calculez enfin le rapport, les vitesses et les dimensions utiles.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="quiz" aria-labelledby="quiz-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">07 · Pour aller plus loin</p>
+          <h2 id="quiz-title">Vérifiez vos repères.</h2>
+        </div>
+        <p>Ouvrez chaque réponse après avoir réfléchi à la question.</p>
+      </div>
+      <div class="quiz-grid">
+        <details class="quiz-card">
+          <summary>Une roue menée a 60 dents et la menante 20. Quel est le rapport i ?</summary>
+          <p>i = 60 / 20 = 3. La sortie tourne trois fois moins vite que l’entrée.</p>
+        </details>
+        <details class="quiz-card">
+          <summary>Quel type est adapté à des axes concourants ?</summary>
+          <p>Les engrenages coniques, souvent utilisés pour un renvoi d’angle.</p>
+        </details>
+        <details class="quiz-card">
+          <summary>Pourquoi le rendement intervient-il dans le calcul du couple ?</summary>
+          <p>Parce que les frottements et autres pertes réduisent le couple réel disponible en sortie.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section wrap thanks-section" id="merci">
+      <div class="thanks-card">
+        <span class="thanks-mark" aria-hidden="true">⚙</span>
+        <p class="eyebrow">Fin de la présentation</p>
+        <h2>Merci !</h2>
+        <p>Travail réalisé par</p>
+        <div class="credits-names">
+          <strong><span class="team-number" aria-hidden="true">01</span>ghassen labiadh</strong>
+          <strong><span class="team-number" aria-hidden="true">02</span>Ayoub Nasri</strong>
+          <strong><span class="team-number" aria-hidden="true">03</span>amenalah garouri</strong>
+          <strong><span class="team-number" aria-hidden="true">04</span>dhafer louati</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="deck-controls" aria-label="Commandes de présentation">
+    <button class="deck-button" id="previous-slide" type="button" aria-label="Diapositive précédente" aria-keyshortcuts="ArrowLeft ArrowUp PageUp" title="← ou ↑ : diapositive précédente">← <span>Précédent</span></button>
+    <div class="deck-progress">
+      <div class="deck-meta">
+        <span id="current-slide-title">Introduction</span>
+        <span id="slide-count" aria-live="polite">1 / 7</span>
+      </div>
+      <div class="progress-track" role="progressbar" aria-label="Progression du cours" aria-valuemin="1" aria-valuemax="7" aria-valuenow="1">
+        <span id="progress-fill"></span>
+      </div>
+      <div class="slide-dots" id="slide-dots" aria-label="Choisir une diapositive"></div>
+    </div>
+    <div class="deck-actions">
+      <button class="deck-button primary" id="next-slide" type="button" aria-label="Diapositive suivante" aria-keyshortcuts="ArrowRight ArrowDown PageDown" title="→ ou ↓ : diapositive suivante"><span>Suivant</span> →</button>
+      <button class="deck-button fullscreen" id="fullscreen-toggle" type="button" aria-label="Afficher en plein écran" title="Afficher en plein écran">⛶</button>
+    </div>
+    <span class="visually-hidden" id="fullscreen-status" role="status" aria-live="polite"></span>
+  </nav>
+  </div>
+
+  <!-- JavaScript : navigation, simulateur d’engrenages et calculatrice -->
+  <script src="script.js" defer></script>
+  <script type="module" src="gears-3d.js"></script>
+  <!-- 01110111 01100001 01101100 01101100 01100001 01101000 00100000 00110101 01100100 01101001 01101101 01101111 00100000 01100111 01101000 01100001 01110011 01110011 01100101 01101110 -->
+  <!-- 01110111 01100001 01101100 01101100 01100001 01101000 00100000 00110101 01100100 01101001 01101101 01101111 00100000 01100111 01101000 01100001 01110011 01110011 01100101 01101110 -->
+  <!-- 01110111 01100001 01101100 01101100 01100001 01101000 00100000 00110101 01100100 01101001 01101101 01101111 00100000 01100111 01101000 01100001 01110011 01110011 01100101 01101110 -->
+  <!-- 01110111 01100001 01101100 01101100 01100001 01101000 00100000 00110101 01100100 01101001 01101101 01101111 00100000 01100111 01101000 01100001 01110011 01110011 01100101 01101110 -->
+  <!-- 01110111 01100001 01101100 01101100 01100001 01101000 00100000 00110101 01100100 01101001 01101101 01101111 00100000 01100111 01101000 01100001 01110011 01110011 01100101 01101110 -->
+  <!-- 01110111 01100001 01101100 01101100 01100001 01101000 00100000 00110101 01100100 01101001 01101101 01101111 00100000 01100111 01101000 01100001 01110011 01110011 01100101 01101110 -->
+  <!-- 01110111 01100001 01101100 01101100 01100001 01101000 00100000 00110101 01100100 01101001 01101101 01101111 00100000 01100111 01101000 01100001 01110011 01110011 01100101 01101110 -->
+  <!-- 01110111 01100001 01101100 01101100 01100001 01101000 00100000 00110101 01100100 01101001 01101101 01101111 00100000 01100111 01101000 01100001 01110011 01110011 01100101 01101110 -->
+  <!-- 01110111 01100001 01101100 01101100 01100001 01101000 00100000 00110101 01100100 01101001 01101101 01101111 00100000 01100111 01101000 01100001 01110011 01110011 01100101 01101110 -->
+  <!-- 01110111 01100001 01101100 01101100 01100001 01101000 00100000 00110101 01100100 01101001 01101101 01101111 00100000 01100111 01101000 01100001 01110011 01110011 01100101 01101110 -->
+</body>
+</html>
